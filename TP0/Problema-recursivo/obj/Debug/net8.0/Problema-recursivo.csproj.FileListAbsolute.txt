@@ -1,0 +1,14 @@
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP0\Problema-recursivo\bin\Debug\net8.0\Problema-recursivo.exe
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP0\Problema-recursivo\bin\Debug\net8.0\Problema-recursivo.deps.json
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP0\Problema-recursivo\bin\Debug\net8.0\Problema-recursivo.runtimeconfig.json
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP0\Problema-recursivo\bin\Debug\net8.0\Problema-recursivo.dll
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP0\Problema-recursivo\bin\Debug\net8.0\Problema-recursivo.pdb
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP0\Problema-recursivo\obj\Debug\net8.0\Problema-recursivo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP0\Problema-recursivo\obj\Debug\net8.0\Problema-recursivo.AssemblyInfoInputs.cache
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP0\Problema-recursivo\obj\Debug\net8.0\Problema-recursivo.AssemblyInfo.cs
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP0\Problema-recursivo\obj\Debug\net8.0\Problema-recursivo.csproj.CoreCompileInputs.cache
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP0\Problema-recursivo\obj\Debug\net8.0\Problema-recursivo.dll
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP0\Problema-recursivo\obj\Debug\net8.0\refint\Problema-recursivo.dll
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP0\Problema-recursivo\obj\Debug\net8.0\Problema-recursivo.pdb
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP0\Problema-recursivo\obj\Debug\net8.0\Problema-recursivo.genruntimeconfig.cache
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP0\Problema-recursivo\obj\Debug\net8.0\ref\Problema-recursivo.dll
