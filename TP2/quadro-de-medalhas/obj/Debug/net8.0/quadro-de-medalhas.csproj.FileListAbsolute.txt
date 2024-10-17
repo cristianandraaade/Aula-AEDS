@@ -1,0 +1,15 @@
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP2\quadro-de-medalhas\bin\Debug\net8.0\quadro-de-medalhas.exe
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP2\quadro-de-medalhas\bin\Debug\net8.0\quadro-de-medalhas.deps.json
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP2\quadro-de-medalhas\bin\Debug\net8.0\quadro-de-medalhas.runtimeconfig.json
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP2\quadro-de-medalhas\bin\Debug\net8.0\quadro-de-medalhas.dll
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP2\quadro-de-medalhas\bin\Debug\net8.0\quadro-de-medalhas.pdb
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP2\quadro-de-medalhas\obj\Debug\net8.0\quadro-de-medalhas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP2\quadro-de-medalhas\obj\Debug\net8.0\quadro-de-medalhas.AssemblyInfoInputs.cache
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP2\quadro-de-medalhas\obj\Debug\net8.0\quadro-de-medalhas.AssemblyInfo.cs
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP2\quadro-de-medalhas\obj\Debug\net8.0\quadro-de-medalhas.csproj.CoreCompileInputs.cache
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP2\quadro-de-medalhas\obj\Debug\net8.0\quadro-de-medalhas.sourcelink.json
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP2\quadro-de-medalhas\obj\Debug\net8.0\quadro-de-medalhas.dll
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP2\quadro-de-medalhas\obj\Debug\net8.0\refint\quadro-de-medalhas.dll
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP2\quadro-de-medalhas\obj\Debug\net8.0\quadro-de-medalhas.pdb
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP2\quadro-de-medalhas\obj\Debug\net8.0\quadro-de-medalhas.genruntimeconfig.cache
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP2\quadro-de-medalhas\obj\Debug\net8.0\ref\quadro-de-medalhas.dll

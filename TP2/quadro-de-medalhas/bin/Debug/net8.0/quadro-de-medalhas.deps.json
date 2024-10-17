@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "quadro-de-medalhas/1.0.0": {
+        "runtime": {
+          "quadro-de-medalhas.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "quadro-de-medalhas/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
