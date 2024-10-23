@@ -1,0 +1,15 @@
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo-listas\bin\Debug\net8.0\estudo-listas.exe
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo-listas\bin\Debug\net8.0\estudo-listas.deps.json
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo-listas\bin\Debug\net8.0\estudo-listas.runtimeconfig.json
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo-listas\bin\Debug\net8.0\estudo-listas.dll
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo-listas\bin\Debug\net8.0\estudo-listas.pdb
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo-listas\obj\Debug\net8.0\estudo-listas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo-listas\obj\Debug\net8.0\estudo-listas.AssemblyInfoInputs.cache
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo-listas\obj\Debug\net8.0\estudo-listas.AssemblyInfo.cs
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo-listas\obj\Debug\net8.0\estudo-listas.csproj.CoreCompileInputs.cache
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo-listas\obj\Debug\net8.0\estudo-listas.sourcelink.json
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo-listas\obj\Debug\net8.0\estudo-listas.dll
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo-listas\obj\Debug\net8.0\refint\estudo-listas.dll
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo-listas\obj\Debug\net8.0\estudo-listas.pdb
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo-listas\obj\Debug\net8.0\estudo-listas.genruntimeconfig.cache
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo-listas\obj\Debug\net8.0\ref\estudo-listas.dll

@@ -1,0 +1,15 @@
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP1\libertadores\bin\Debug\net8.0\libertadores.exe
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP1\libertadores\bin\Debug\net8.0\libertadores.deps.json
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP1\libertadores\bin\Debug\net8.0\libertadores.runtimeconfig.json
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP1\libertadores\bin\Debug\net8.0\libertadores.dll
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP1\libertadores\bin\Debug\net8.0\libertadores.pdb
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP1\libertadores\obj\Debug\net8.0\libertadores.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP1\libertadores\obj\Debug\net8.0\libertadores.AssemblyInfoInputs.cache
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP1\libertadores\obj\Debug\net8.0\libertadores.AssemblyInfo.cs
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP1\libertadores\obj\Debug\net8.0\libertadores.csproj.CoreCompileInputs.cache
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP1\libertadores\obj\Debug\net8.0\libertadores.sourcelink.json
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP1\libertadores\obj\Debug\net8.0\libertadores.dll
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP1\libertadores\obj\Debug\net8.0\refint\libertadores.dll
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP1\libertadores\obj\Debug\net8.0\libertadores.pdb
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP1\libertadores\obj\Debug\net8.0\libertadores.genruntimeconfig.cache
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\TP1\libertadores\obj\Debug\net8.0\ref\libertadores.dll
