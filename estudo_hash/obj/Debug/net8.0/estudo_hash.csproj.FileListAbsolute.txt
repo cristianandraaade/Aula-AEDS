@@ -1,0 +1,15 @@
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo_hash\bin\Debug\net8.0\estudo_hash.exe
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo_hash\bin\Debug\net8.0\estudo_hash.deps.json
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo_hash\bin\Debug\net8.0\estudo_hash.runtimeconfig.json
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo_hash\bin\Debug\net8.0\estudo_hash.dll
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo_hash\bin\Debug\net8.0\estudo_hash.pdb
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo_hash\obj\Debug\net8.0\estudo_hash.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo_hash\obj\Debug\net8.0\estudo_hash.AssemblyInfoInputs.cache
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo_hash\obj\Debug\net8.0\estudo_hash.AssemblyInfo.cs
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo_hash\obj\Debug\net8.0\estudo_hash.csproj.CoreCompileInputs.cache
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo_hash\obj\Debug\net8.0\estudo_hash.sourcelink.json
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo_hash\obj\Debug\net8.0\estudo_hash.dll
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo_hash\obj\Debug\net8.0\refint\estudo_hash.dll
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo_hash\obj\Debug\net8.0\estudo_hash.pdb
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo_hash\obj\Debug\net8.0\estudo_hash.genruntimeconfig.cache
+C:\Users\crist\Desktop\Projetos Faculdade\Aula-AEDS\estudo_hash\obj\Debug\net8.0\ref\estudo_hash.dll

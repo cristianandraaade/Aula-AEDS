@@ -1,199 +1,156 @@
 ﻿using System;
-using System.Linq.Expressions;
-using System.IO;
-using System.Security.Cryptography.X509Certificates;
-
-public class No
+using System.Collections;
+class CCelula
 {
     public Pokemon atual;
-    public No prox;
-}
-public class Pilha
-{
-    public No inicio;
-    public int tamanho;
-    public void Capturar_Pokemon(Pilha q, Fila p, string[] parametros_busca)
+    public CCelula prox;
+    public CCelula()
     {
-        No tmp = p.inicio;
+        atual = null;
+        prox = null;
+    }
+    public CCelula(Pokemon ValorItem)
+    {
+        atual = ValorItem;
+        prox = null;
+    }
+    public CCelula(Pokemon ValorItem, CCelula ProxCelula)
+    {
+        atual = ValorItem;
+        prox = ProxCelula;
+    }
+}
+class CFila
+{
+    public CCelula inicio;
+    public CCelula fim;
+    private int Qtde = 0;
+
+    public void Imprimir(CFila f)
+    {
+        for (CCelula aux = f.inicio; aux != null; aux = aux.prox)
+            Console.WriteLine(aux.atual.name);
+    }
+    public void Enfileira(CFila f, Pokemon ValorItem)
+    {
+        if (f.inicio == null)
+        {
+            f.inicio = f.fim = new CCelula(ValorItem);
+        }
+        else
+        {
+            f.fim.prox = new CCelula(ValorItem);
+            f.fim = f.fim.prox;
+        }
+        f.Qtde++;
+    }
+    public Pokemon Desenfileira(CFila f)
+    {
+        Pokemon Item = null;
+        if (f.inicio != f.fim)
+        {
+            Item = f.inicio.atual;
+            f.inicio = f.inicio.prox;
+            f.Qtde--;
+        }
+        else if (f.inicio == f.fim)
+        {
+            if (f.inicio == null)
+            {
+                return null;
+            }
+            else
+            {
+                Item = f.inicio.atual;
+                f.inicio = f.fim = null;
+            }
+        }
+        return Item;
+    }
+    public Pokemon Desenfileira_busca(CFila f, Pokemon p)
+    {
+        Pokemon Item = null;
+        if (f.inicio.atual == p)
+        {
+            Item = f.inicio.atual;
+            f.inicio = f.inicio.prox;
+            if (f.inicio == null) { f.fim = null; }
+            f.Qtde--;
+            return Item;
+        }
+        CCelula tmp = f.inicio;
+        while (tmp.prox != null)
+        {
+            if (tmp.prox.atual == p)
+            {
+                Item = tmp.prox.atual;
+                tmp.prox = tmp.prox.prox;
+                if (tmp.prox == null) { fim = tmp; }
+                f.Qtde--;
+            }
+            tmp = tmp.prox;
+        }
+        return Item;
+    }
+    public int Quantidade(CFila f)
+    {
+        return f.Qtde;
+    }
+    public void CapturarPokemon(CFila f, CPilha q, string[] parametros_busca)
+    {
         float[] casos_especiais = new float[2];
         if (float.TryParse(parametros_busca[0], out _) && float.TryParse(parametros_busca[1], out _))
         {
             casos_especiais[0] = float.Parse(parametros_busca[0]);
             casos_especiais[1] = float.Parse(parametros_busca[1]);
         }
-        for (; tmp != null; tmp = tmp.prox)
+        for (CCelula aux = f.inicio; aux != null; aux = aux.prox)
         {
-
-            if (tmp.atual.name == parametros_busca[0])
+            if (aux.atual.name == parametros_busca[0])
             {
-                Console.WriteLine(tmp.atual.name);
-                q.InserirPilha(q, tmp);
-                p.RemoveFila(p, tmp);
+                Pokemon p = Desenfileira_busca(f, aux.atual);
+                Console.WriteLine(p.name);
+                q.Empilha(q, p);
             }
-            else if (tmp.atual.type1 == parametros_busca[0] && tmp.atual.type2 == parametros_busca[1])
+            else if (aux.atual.type1 == parametros_busca[0] && aux.atual.type2 == parametros_busca[1])
             {
-                Console.WriteLine(tmp.atual.name);
-                q.InserirPilha(q, tmp);
-                p.RemoveFila(p, tmp);
+                Pokemon p = Desenfileira_busca(f, aux.atual);
+                Console.WriteLine(p.name);
+                q.Empilha(q, p);
             }
-            else if (tmp.atual.weight_kg > casos_especiais[0] && tmp.atual.weight_kg <= casos_especiais[1])
+            else if (aux.atual.weight_kg > casos_especiais[0] && aux.atual.weight_kg <= casos_especiais[1])
             {
-                Console.WriteLine(tmp.atual.name);
-                q.InserirPilha(q, tmp);
-                p.RemoveFila(p, tmp);
+                Pokemon p = Desenfileira_busca(f, aux.atual);
+                Console.WriteLine(p.name);
+                q.Empilha(q, p);
             }
-        }
-    }
-    public void InserirPilha(Pilha q, No p)
-    {
-        if (q.inicio == null)
-        {
-            q.inicio = new No
-            {
-                atual = p.atual,
-                prox = null,
-            };
-        }
-        else
-        {
-            No tmp = new No
-            {
-                atual = p.atual,
-                prox = q.inicio,
-            };
-            q.inicio = tmp;
-        }
-    }
-
-
-    public void ImprimirPilha(No inicio)
-    {
-        No tmp = inicio;
-        while (tmp != null)
-        {
-            Console.WriteLine(tmp.atual.name);
-            tmp = tmp.prox;
-        }
-    }
-    public int TamanhoPilha(No inicio)
-    {
-        No tmp = inicio;
-        if (tmp == null)
-        {
-            return 0;
-        }
-        else
-        {
-            return 1 + TamanhoPilha(tmp.prox);
         }
     }
 }
-
-public class Fila
+class CPilha
 {
-    public No inicio;
-    public int tamanho;
-
-    public void InserirPokemon(Fila f, Pokemon p)
+    public CCelula topo = null;
+    public int Qtde = 0;
+    public void Empilha(CPilha p, Pokemon ValorItem)
     {
-        No novo = new No
-        {
-            atual = p,
-            prox = null,
-        };
-        if (f.inicio == null)
-        {
-            f.inicio = novo;
-        }
-        else
-        {
-            No tmp = f.inicio;
-            while (tmp.prox != null)
-            {
-                tmp = tmp.prox;
-            }
-            tmp.prox = novo;
-        }
+        p.topo = new CCelula(ValorItem, p.topo);
+        p.Qtde++;
     }
-    public void ImprimirLista(No inicio)
+    public Pokemon Desempilha(CPilha p)
     {
-        No tmp = inicio;
-        if(tmp == null){
-            Console.WriteLine();
-        }
-        while (tmp != null)
+        Pokemon Item = null;
+        if (p.topo != null)
         {
-            Console.WriteLine(tmp.atual.name);
-            tmp = tmp.prox;
+            Item = p.topo.atual;
+            p.topo = p.topo.prox;
+            p.Qtde--;
         }
+        return Item;
     }
-    public void RemoveFila(Fila f, No remove)
+    public void Imprimir(CPilha p)
     {
-        if (f.inicio == null || remove == null) return;
-
-        if (f.inicio == remove)
-        {
-            f.inicio = f.inicio.prox;
-            return;
-        }
-
-        No tmp = f.inicio;
-        while (tmp != null && tmp.prox != remove)
-        {
-            tmp = tmp.prox;
-        }
-        if (tmp != null && tmp.prox == remove)
-        {
-            tmp.prox = remove.prox;
-        }
-    }
-    public int TamanhoFila(No inicial)
-    {
-        No tmp = inicial;
-        if (tmp == null)
-        {
-            return 0;
-        }
-        else
-        {
-            return 1 + TamanhoFila(tmp.prox);
-        }
-    }
-    public void Preparar_Pokemon(Fila f, Pilha p)
-    {
-        if (f.inicio == null)
-        {
-            f.inicio = new No
-            {
-                atual = p.inicio.atual,
-                prox = null,
-            };
-            p.inicio = p.inicio.prox;
-        }
-        else
-        {
-            No tmp = f.inicio;
-            while (tmp.prox != null)
-            {
-                tmp = tmp.prox;
-            }
-            tmp.prox = new No
-            {
-                atual = p.inicio.atual,
-                prox = null,
-            };
-            p.inicio = p.inicio.prox;
-        }
-    }
-    public Pokemon Remove_Fila(Fila f)
-    {
-        if (f.inicio == null)
-        {
-            return null;
-        }
-        Pokemon tmp = f.inicio.atual;
-        f.inicio = f.inicio.prox;
-        return tmp;
+        for (CCelula aux = p.topo; aux != null; aux = aux.prox)
+            Console.WriteLine(aux.atual.name);
     }
 
 }
@@ -218,30 +175,31 @@ public class Program
     {
         int n = 0, c = 0;
         int.TryParse(Console.ReadLine(), out n);
-        Fila pokemon_mundo = new Fila();
-        Pilha equipe_batalha = new Pilha();
-        Fila preparar_pokemon = new Fila();
+        CFila pokemon_mundo = new CFila();
+        CPilha equipe_batalha = new CPilha();
+        CFila preparar_pokemon = new CFila();
         for (int i = 0; i < n; i++)
         {
             string[] entrada = Console.ReadLine().Split(";");
             Pokemon p = new Pokemon
             {
-                id = int.TryParse(entrada[0], out int id) ? id : 0,
-                generation = int.TryParse(entrada[1], out int generation) ? generation : 0,
+                id = int.Parse(entrada[0]), 
+                generation = int.Parse(entrada[1]),
                 name = entrada[2],
                 description = entrada[3],
                 type1 = validadeType(entrada[4]),
                 type2 = validadeType(entrada[5]),
                 weight_kg = float.TryParse(entrada[6], out float weight) ? weight : 0.0f,
                 height_m = float.TryParse(entrada[7], out float height) ? height : 0.0f,
-                capture_rate = int.TryParse(entrada[8], out int captureRate) ? captureRate : 0,
+                capture_rate = int.Parse(entrada[8]), 
                 is_legendary = retornaIs_Legendary(entrada[9]),
                 capture_date = entrada[10],
                 abilities = validateAbilities(entrada),
             };
-            pokemon_mundo.InserirPokemon(pokemon_mundo, p);
+            if(p.name != "")
+            pokemon_mundo.Enfileira(pokemon_mundo, p);
         }
-        //pokemon_mundo.ImprimirLista(pokemon_mundo.inicio);
+        //pokemon_mundo.Imprimir(pokemon_mundo);
         int.TryParse(Console.ReadLine(), out c);
         for (int i = 0; i < c; i++)
         {
@@ -250,26 +208,39 @@ public class Program
             if (entrada2[0] == "C")//FUNÇÃO CAPTURAR POKEMON
             {
                 string[] parametros_busca = retornaEntrada(entrada2);
-                equipe_batalha.Capturar_Pokemon(equipe_batalha, pokemon_mundo, parametros_busca);
+                pokemon_mundo.CapturarPokemon(pokemon_mundo, equipe_batalha, parametros_busca);
             }
             else if (entrada2[0] == "P")//FUNÇÃO PREPARAR POKEMON
             {
                 int num_acoes = int.Parse(entrada2[1]);
                 for (int j = 1; j <= num_acoes; j++)
                 {
-                    preparar_pokemon.Preparar_Pokemon(preparar_pokemon, equipe_batalha);
+                    Pokemon p = equipe_batalha.Desempilha(equipe_batalha);
+                    if (p != null)
+                    {
+                        Console.WriteLine(p.name);
+                        preparar_pokemon.Enfileira(preparar_pokemon, p);
+                    }
+                    else
+                    {
+                        Console.WriteLine();
+                    }
                 }
-                preparar_pokemon.ImprimirLista(preparar_pokemon.inicio);
+
             }
             else if (entrada2[0] == "B")// FUNÇÃO BATALHAR POKEMON
             {
                 int num_acoes = int.Parse(entrada2[1]);
                 for (int j = 1; j <= num_acoes; j++)
                 {
-                    Pokemon p = preparar_pokemon.Remove_Fila(preparar_pokemon);
+                    Pokemon p = preparar_pokemon.Desenfileira(preparar_pokemon);
                     if (p != null)
                     {
                         Console.WriteLine($"{p.id};{p.generation};{p.name};{p.description};{p.type1};{get_Type(p.type2)};{p.weight_kg};{p.height_m};{p.capture_rate};{get_Is_Legendary(p.is_legendary)};{p.capture_date};{get_Abilities(p.abilities)}");
+                    }
+                    else
+                    {
+                        Console.WriteLine();
                     }
                 }
             }
@@ -278,23 +249,17 @@ public class Program
                 int num_acoes = int.Parse(entrada2[1]);
                 for (int k = 1; k <= num_acoes; k++)
                 {
-                    Pokemon p = preparar_pokemon.inicio.atual;
-                    preparar_pokemon.inicio = preparar_pokemon.inicio.prox;
+                    Pokemon p = preparar_pokemon.Desenfileira(preparar_pokemon);
                     Console.WriteLine(p.name);
-                    No novo = new No()
-                    {
-                        atual = p,
-                        prox = equipe_batalha.inicio.prox,
-                    };
-                    equipe_batalha.inicio = novo;
+                    equipe_batalha.Empilha(equipe_batalha, p);
                 }
             }
-            else
+            else if(entrada2[0] == "L")
             {
                 int num_acoes = int.Parse(entrada2[1]);
                 for (int l = 1; l <= num_acoes; l++)
                 {
-                    Pokemon p = preparar_pokemon.Remove_Fila(preparar_pokemon);
+                    Pokemon p = preparar_pokemon.Desenfileira(preparar_pokemon);
                     if (p != null)
                     {
                         Console.WriteLine($"{p.id};{p.generation};{p.name};{p.description};{p.type1};{get_Type(p.type2)};{p.weight_kg};{p.height_m};{p.capture_rate};{get_Is_Legendary(p.is_legendary)};{p.capture_date};{get_Abilities(p.abilities)}");
@@ -307,15 +272,15 @@ public class Program
             }
         }
     }
+
+
+    //FUNÇOES DE TRATAMENTO DE DADOS
     public static string[] retornaEntrada(string[] entrada)
     {
         string[] retorno = new string[2];
-        for (int i = 1; i < entrada.Length; i++)
+        for (int i = 1; i < entrada.Length && i - 1 < retorno.Length; i++)
         {
-            if (!string.IsNullOrEmpty(entrada[i]))
-            {
-                retorno[i - 1] = entrada[i];
-            }
+            retorno[i - 1] = entrada[i];
         }
         return retorno;
     }
